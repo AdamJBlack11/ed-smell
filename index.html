@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ED Smell 💨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e6ffe6;
+      font-family: 'Bangers', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 72px;
+      color: #ff4500;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin-bottom: 50px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .button {
+      background-color: #00bfff;
+      color: #fff;
+      border: none;
+      padding: 20px 40px;
+      margin: 10px;
+      border-radius: 40px;
+      font-size: 24px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      cursor: pointer;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .button:hover {
+      background-color: #1e90ff;
+    }
+
+    .button:active {
+      transform: scale(1.05);
+      animation: wiggle 0.3s;
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+      75% { transform: rotate(2deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💥 ED Smell 💨</h1>
+
+  <button class="button" onclick="playFart(1)">💩 Smelly Fart 1</button>
+  <button class="button" onclick="playFart(2)">🧻 Smelly Fart 2</button>
+  <button class="button" onclick="playFart(3)">🫢 Smelly Fart 3</button>
+  <button class="button" onclick="playFart(4)">👃 Smelly Fart 4</button>
+  <button class="button" onclick="playFart(5)">🚽 Smelly Fart 5</button>
+
+  <!-- Hidden audio elements -->
+  <audio id="fart1" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+  <audio id="fart2" src="https://www.fesliyanstudios.com/play-mp3/388" preload="auto"></audio>
+  <audio id="fart3" src="https://www.fesliyanstudios.com/play-mp3/389" preload="auto"></audio>
+  <audio id="fart4" src="https://www.fesliyanstudios.com/play-mp3/390" preload="auto"></audio>
+  <audio id="fart5" src="https://www.fesliyanstudios.com/play-mp3/391" preload="auto"></audio>
+
+  <script>
+    function playFart(num) {
+      const audio = document.getElementById(`fart${num}`);
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
